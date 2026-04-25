@@ -19,7 +19,7 @@
    - `<Header>` — clinic name, tagline
    - `<Nav>` — placeholder links (Agents, Appointments, Dashboard)
    - `<Footer>` — small ironic sign-off
-9. Apply "clean/ironic clinic aesthetic" via Tailwind: muted clinical palette, serif/mono font pairing, subtle waiting-room energy
+9. Apply "clean/ironic clinic aesthetic" via Tailwind: muted clinical palette, Helvetica (system font stack) used everywhere, subtle waiting-room energy
 
 ## Task Group 4 — Placeholder Home Page
 
