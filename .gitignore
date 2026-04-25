@@ -9,3 +9,13 @@ yarn-error.log*
 .pnp.js
 
 .vscode/*
+
+# Next.js
+/.next/
+/out/
+
+# Database
+/data/
+*.db
+*.db-shm
+*.db-wal

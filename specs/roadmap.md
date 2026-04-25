@@ -4,7 +4,7 @@ Each phase is a small, shippable increment. Features within a phase are added on
 
 ---
 
-## Phase 0 — Project Scaffolding ✦ *current*
+## Phase 0 — Project Scaffolding ✓ *complete*
 
 - Initialize Next.js app (TypeScript, App Router, Tailwind CSS)
 - Set up SQLite with `better-sqlite3`

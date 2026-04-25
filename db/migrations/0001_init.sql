@@ -1,0 +1,2 @@
+-- Phase 0: no tables yet; schema grows with each phase.
+-- This migration is intentionally empty.
