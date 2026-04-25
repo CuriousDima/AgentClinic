@@ -1,0 +1,11 @@
+-- Reference snapshot of the current database schema.
+-- Not executed at runtime — for human reference and debugging only.
+-- Last updated: Phase 0 (project scaffolding)
+--
+-- The migration runner maintains this table automatically:
+--
+-- CREATE TABLE _migrations (
+--   id         INTEGER PRIMARY KEY AUTOINCREMENT,
+--   name       TEXT    NOT NULL UNIQUE,
+--   applied_at TEXT    NOT NULL DEFAULT (datetime('now'))
+-- );
