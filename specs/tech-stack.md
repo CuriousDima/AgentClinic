@@ -16,6 +16,12 @@
 - Schema created once at init time; no migration management needed
 - Schema kept in a `schema.sql` file in the repo for reference and debugging
 
+## Testing
+
+- **Vitest** — fast unit and integration tests, TypeScript-native
+- `npm test` runs the suite once (suitable for CI and pre-merge validation)
+- `npm run test:watch` runs in watch mode during development
+
 ## Auth
 
 - None for now — all routes are publicly accessible
