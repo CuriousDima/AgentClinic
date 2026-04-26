@@ -12,3 +12,21 @@ export interface Agent {
   status: AgentStatus;
   created_at: string;
 }
+
+export interface Ailment {
+  id: number;
+  name: string;
+  description: string;
+  created_at: string;
+}
+
+export interface Therapy {
+  id: number;
+  name: string;
+  description: string;
+  created_at: string;
+}
+
+export interface AilmentWithTherapies extends Ailment {
+  therapies: Therapy[];
+}

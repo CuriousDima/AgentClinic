@@ -24,7 +24,7 @@ Each phase is a small, shippable increment. Features within a phase are added on
 
 ---
 
-## Phase 2 — Ailments & Therapies Catalog
+## Phase 2 — Ailments & Therapies Catalog ✓ *complete*
 
 - Database tables: `ailments`, `therapies`
 - List of recognized conditions (e.g., "Prompt Injection Paranoia", "Context Window Claustrophobia")
