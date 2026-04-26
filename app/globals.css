@@ -1,3 +1,26 @@
+@import 'react-big-calendar/lib/css/react-big-calendar.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Restore react-big-calendar button styles reset by Tailwind preflight */
+.rbc-toolbar button {
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 0.375rem 1rem;
+  border-radius: 4px;
+  background: white;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.rbc-toolbar button:hover {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.rbc-toolbar button.rbc-active {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}

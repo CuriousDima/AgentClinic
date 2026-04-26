@@ -3,7 +3,6 @@
 import { Calendar, dateFnsLocalizer, Views } from 'react-big-calendar';
 import { format, parse, startOfWeek, getDay } from 'date-fns';
 import { enUS } from 'date-fns/locale';
-import 'react-big-calendar/lib/css/react-big-calendar.css';
 import type { AppointmentWithNames } from '@/lib/types';
 
 const localizer = dateFnsLocalizer({
@@ -29,11 +28,17 @@ export default function BigCalendarInner({ appointments }: Props) {
     };
   });
 
+  const defaultDate =
+    events.length > 0
+      ? [...events].sort((a, b) => a.start.getTime() - b.start.getTime())[0].start
+      : new Date();
+
   return (
     <Calendar
       localizer={localizer}
       events={events}
       defaultView={Views.WEEK}
+      defaultDate={defaultDate}
       views={[Views.WEEK, Views.MONTH, Views.AGENDA]}
       style={{ height: '100%' }}
     />
