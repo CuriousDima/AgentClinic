@@ -15,7 +15,7 @@ Each phase is a small, shippable increment. Features within a phase are added on
 
 ---
 
-## Phase 1 — Agent Profiles
+## Phase 1 — Agent Profiles ✓ *complete*
 
 - Database table: `agents`
 - List all agents (receptionist/therapist view)
