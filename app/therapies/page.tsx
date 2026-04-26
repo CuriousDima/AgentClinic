@@ -24,7 +24,7 @@ export default function TherapiesPage() {
           <p className="text-sm">Our treatment team is still developing the curriculum.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {therapiesWithAilments.map((therapy) => (
             <div
               key={therapy.id}

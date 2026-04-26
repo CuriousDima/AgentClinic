@@ -1,6 +1,6 @@
 -- Reference snapshot of the current database schema.
 -- Not executed at runtime — for human reference and debugging only.
--- Last updated: Phase 2 (ailments & therapies)
+-- Last updated: MVP (therapists & appointments)
 
 -- Migration tracking (maintained automatically by the runner):
 -- CREATE TABLE _migrations (
@@ -45,4 +45,21 @@ CREATE TABLE agent_ailments (
   ailment_id INTEGER NOT NULL REFERENCES ailments(id),
   created_at TEXT    NOT NULL DEFAULT (datetime('now')),
   UNIQUE (agent_id, ailment_id)
+);
+
+CREATE TABLE therapists (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  name       TEXT    NOT NULL,
+  specialty  TEXT    NOT NULL,
+  bio        TEXT    NOT NULL DEFAULT '',
+  created_at TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE appointments (
+  id           INTEGER PRIMARY KEY AUTOINCREMENT,
+  agent_id     INTEGER NOT NULL REFERENCES agents(id),
+  therapist_id INTEGER NOT NULL REFERENCES therapists(id),
+  scheduled_at TEXT    NOT NULL,
+  notes        TEXT    NOT NULL DEFAULT '',
+  created_at   TEXT    NOT NULL DEFAULT (datetime('now'))
 );

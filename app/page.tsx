@@ -34,7 +34,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="mt-16 grid grid-cols-3 gap-6">
+      <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
         {[
           { stat: '0', label: 'Agents in care', sub: 'all recovered and discharged' },
           { stat: '0', label: 'Appointments this week', sub: 'calendar is clear' },

@@ -20,7 +20,7 @@ export default function AilmentsPage() {
           <p className="text-sm">The DSM-LLM is still being compiled.</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {ailments.map((ailment) => (
             <div
               key={ailment.id}
