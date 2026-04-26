@@ -25,7 +25,7 @@ CREATE TABLE agents (
 | `name` | `TEXT` | Auto-populated with a funny generated name; user may override |
 | `model` | `TEXT` | Free-text string (e.g. "claude-sonnet-4-6", "gpt-4o") |
 | `presenting_complaints` | `TEXT` | Plain text; free-form, may be blank |
-| `status` | `TEXT` enum | `'active'` or `'inactive'`; defaults to `'active'` |
+| `status` | `TEXT` enum | `AgentStatus.Active` or `AgentStatus.Inactive`; defaults to `'active'` in DB, `AgentStatus.Active` in code |
 | `created_at` | `TEXT` | SQLite datetime string, set at insert |
 
 ## Name Generation
@@ -42,6 +42,21 @@ CREATE TABLE agents (
 - **Create/Edit**: single shared `AgentForm` component; no separate pages for create vs. edit logic
 - **Deactivate**: button on detail page; no hard-delete exposed in the UI
 - **No confirmation dialog** for deactivate (that's Phase 4 — Polish)
+
+## TypeScript Enum
+
+`AgentStatus` is defined as a `const` enum in `lib/types.ts`:
+
+```typescript
+export const AgentStatus = {
+  Active: 'active',
+  Inactive: 'inactive',
+} as const;
+export type AgentStatus = (typeof AgentStatus)[keyof typeof AgentStatus];
+```
+
+- The DB column stores the string values (`'active'` / `'inactive'`) via the CHECK constraint
+- All TypeScript code references `AgentStatus.Active` / `AgentStatus.Inactive` — no bare string literals for status anywhere
 
 ## Server Actions
 
