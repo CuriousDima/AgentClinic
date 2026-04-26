@@ -1,14 +1,3 @@
--- Reference snapshot of the current database schema.
--- Not executed at runtime — for human reference and debugging only.
--- Last updated: Phase 1 (agent profiles)
-
--- Migration tracking (maintained automatically by the runner):
--- CREATE TABLE _migrations (
---   id         INTEGER PRIMARY KEY AUTOINCREMENT,
---   name       TEXT    NOT NULL UNIQUE,
---   applied_at TEXT    NOT NULL DEFAULT (datetime('now'))
--- );
-
 CREATE TABLE agents (
   id                    INTEGER PRIMARY KEY AUTOINCREMENT,
   name                  TEXT    NOT NULL,
