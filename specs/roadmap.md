@@ -34,17 +34,12 @@ Each phase is a small, shippable increment. Features within a phase are added on
 
 ---
 
-## Phase 3 — Appointment Booking
+## Phase 3 — Appointments & Staff Dashboard
 
 - Database tables: `therapists`, `appointments`
 - Receptionist can book an appointment for an agent with a therapist
 - View upcoming appointments (calendar or list view)
 - Cancel / reschedule an appointment
-
----
-
-## Phase 4 — Staff Dashboard
-
 - Unified dashboard for therapists and receptionists
 - Today's appointment queue
 - Quick links to agent profiles and open ailments
@@ -52,7 +47,7 @@ Each phase is a small, shippable increment. Features within a phase are added on
 
 ---
 
-## Phase 5 — Polish & UX
+## Phase 4 — Polish & UX
 
 - Responsive design for smaller screens
 - Empty states, loading states, error boundaries
