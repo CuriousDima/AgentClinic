@@ -5,6 +5,12 @@ export default function Nav() {
         <a href="/agents" className="hover:text-white transition-colors">
           Agents
         </a>
+        <a href="/ailments" className="hover:text-white transition-colors">
+          Ailments
+        </a>
+        <a href="/therapies" className="hover:text-white transition-colors">
+          Therapies
+        </a>
         <a href="/appointments" className="hover:text-white transition-colors">
           Appointments
         </a>
