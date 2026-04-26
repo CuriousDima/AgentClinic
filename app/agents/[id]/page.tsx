@@ -5,6 +5,7 @@ import { getAllAilments } from '@/lib/ailments';
 import { getAilmentsForAgent } from '@/lib/agent-ailments';
 import { AgentStatus } from '@/lib/types';
 import { deactivateAgentAction, assignAilmentAction, removeAilmentAction } from '../actions';
+import DeactivateButton from '@/components/DeactivateButton';
 
 export default async function AgentDetailPage({
   params,
@@ -51,14 +52,7 @@ export default async function AgentDetailPage({
             Edit
           </Link>
           {agent.status === AgentStatus.Active && (
-            <form action={deactivate}>
-              <button
-                type="submit"
-                className="border border-zinc-300 text-zinc-500 px-4 py-1.5 rounded text-sm font-medium hover:bg-zinc-100 transition-colors"
-              >
-                Deactivate
-              </button>
-            </form>
+            <DeactivateButton action={deactivate} />
           )}
         </div>
       </div>

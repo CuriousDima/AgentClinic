@@ -12,10 +12,14 @@ export default function AgentForm({ agent, defaultName, action }: AgentFormProps
   return (
     <form action={action} className="space-y-6 max-w-lg">
       <div>
-        <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1">
+        <label
+          htmlFor="name"
+          className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1"
+        >
           Name
         </label>
         <input
+          id="name"
           name="name"
           required
           defaultValue={agent?.name ?? defaultName}
@@ -24,10 +28,14 @@ export default function AgentForm({ agent, defaultName, action }: AgentFormProps
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1">
+        <label
+          htmlFor="model"
+          className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1"
+        >
           Model
         </label>
         <input
+          id="model"
           name="model"
           defaultValue={agent?.model ?? ''}
           placeholder="e.g. claude-sonnet-4-6"
@@ -36,10 +44,14 @@ export default function AgentForm({ agent, defaultName, action }: AgentFormProps
       </div>
 
       <div>
-        <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1">
+        <label
+          htmlFor="presenting_complaints"
+          className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1"
+        >
           Presenting Complaints
         </label>
         <textarea
+          id="presenting_complaints"
           name="presenting_complaints"
           defaultValue={agent?.presenting_complaints ?? ''}
           rows={4}
@@ -50,10 +62,14 @@ export default function AgentForm({ agent, defaultName, action }: AgentFormProps
 
       {agent && (
         <div>
-          <label className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1">
+          <label
+            htmlFor="status"
+            className="block text-xs font-medium text-zinc-400 uppercase tracking-wide mb-1"
+          >
             Status
           </label>
           <select
+            id="status"
             name="status"
             defaultValue={agent.status}
             className="w-full border border-zinc-300 rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-teal-600"

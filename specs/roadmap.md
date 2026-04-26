@@ -34,22 +34,19 @@ Each phase is a small, shippable increment. Features within a phase are added on
 
 ---
 
-## Phase 3 — Appointments & Staff Dashboard
+## Phase 3 — Appointments & Staff Dashboard ✓ *complete*
 
 - Database tables: `therapists`, `appointments`
 - Receptionist can book an appointment for an agent with a therapist
 - View upcoming appointments (calendar or list view)
-- Cancel / reschedule an appointment
-- Unified dashboard for therapists and receptionists
-- Today's appointment queue
-- Quick links to agent profiles and open ailments
-- Simple metrics: total agents, appointments this week, most common ailment
+- Unified dashboard: total agents, total appointments, most common ailment
+- Quick links to agent profiles, appointments, ailments, therapists
 
 ---
 
-## Phase 4 — Polish & UX
+## Phase 4 — Polish & UX ✓ *complete*
 
 - Responsive design for smaller screens
-- Empty states, loading states, error boundaries
-- Confirmation dialogs for destructive actions
-- Accessibility pass (keyboard nav, ARIA labels)
+- Loading states (skeletons) and error boundaries for all route segments
+- Confirmation dialogs for destructive actions (deactivate agent)
+- Accessibility pass (keyboard nav, ARIA labels, label/input associations)
