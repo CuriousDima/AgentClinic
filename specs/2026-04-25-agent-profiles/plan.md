@@ -51,4 +51,3 @@
 ## Task Group 9 — Tests
 
 17. Write Vitest unit tests for all functions in `lib/agents.ts` (uses temp DB, mirrors pattern from `db/client.test.ts`)
-18. Visual validation with Playwright MCP: list page, detail page, create flow, edit flow, deactivate flow

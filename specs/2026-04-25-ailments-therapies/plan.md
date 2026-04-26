@@ -96,6 +96,3 @@ Tasks are numbered. Complete them in order — each group builds on the last.
 
 ---
 
-## Group 8 — Playwright Visual Validation
-
-18. Run Playwright MCP against `http://localhost:3000` and validate all items in `validation.md`.

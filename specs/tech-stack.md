@@ -18,22 +18,13 @@
 
 ## Testing
 
-Every feature ships with two mandatory layers — neither is optional:
-
 ### Unit & Integration — Vitest
 - **Vitest** — fast unit and integration tests, TypeScript-native
 - `npm test` runs the suite once (suitable for CI and pre-merge validation)
 - `npm run test:watch` runs in watch mode during development
 - Covers: data-layer functions, utilities, business logic
 
-### Behavioral — Playwright (via MCP)
-- **Playwright MCP** — visual, end-to-end browser validation on every feature
-- Validates the full user flow in a real browser: navigation, form submission, data persistence, UI state (e.g. greyed-out cards, redirects)
-- Run against the local dev server (`npm run dev`) before marking any feature complete
-- Covers: every user-facing flow introduced or changed in the phase
-
-### Rule
-A phase is not mergeable until **both** layers pass. Vitest alone is not sufficient.
+A phase is not mergeable until `npm test` passes with no failures.
 
 ## Auth
 

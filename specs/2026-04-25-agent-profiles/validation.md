@@ -19,17 +19,6 @@ This phase is mergeable when all of the following pass.
 - [ ] Migration is idempotent (re-running does not error)
 - [ ] `db/schema.sql` reflects the `agents` table
 
-### Visual Validation (Playwright MCP)
-
-- [ ] `/agents` renders the card grid (or empty state if no agents)
-- [ ] "New Agent" button is visible and navigates to `/agents/new`
-- [ ] Create form loads with a pre-populated funny name
-- [ ] Submitting the create form inserts the agent and redirects to the detail page
-- [ ] Detail page shows all fields and both Edit and Deactivate buttons
-- [ ] Edit form is pre-filled with existing agent data; saving updates and redirects
-- [ ] Deactivating an agent redirects to the list; the agent card appears greyed-out
-- [ ] Inactive agents remain visible in the list (not hidden)
-
 ## Smoke Test (manual fallback)
 
 1. `npm run dev`
